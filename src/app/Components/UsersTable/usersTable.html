@@ -1,0 +1,17 @@
+<div>
+    <h1>{{ title }}</h1>
+    <table class="users-table">
+        <tr>
+            <td *ngFor="let item of tableHead" class="users-table__cell _header" (click)="sortBy(item.name)" [ngClass]="{'_hide-m': item.name === 'address.city', '_underline': item.name === tableSortParam}">
+                <span class="users-table__title">{{ item.title }}</span>
+            </td>
+        </tr>
+        <tr class="users-table__row" *ngFor="let user of users">
+            <td class="users-table__cell">{{ user.name }}</td>
+            <td class="users-table__cell">{{ user.age }}</td>
+            <td class="users-table__cell">{{ user.gender }}</td>
+            <td class="users-table__cell">{{ user.department }}</td>
+            <td class="users-table__cell _hide-m">{{ user.address.city }}, {{ user.address.street }}</td>
+        </tr>
+    </table>
+</div>

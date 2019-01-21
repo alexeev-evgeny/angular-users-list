@@ -1,0 +1,40 @@
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.users-table__cell {
+    padding: 10px 12px;
+    border: 1px solid #c4c4c4;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.users-table__row:hover .users-table__cell {
+    background-color: #d9eeff;   
+}
+
+.users-table__cell._header {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.users-table__cell._header:hover,
+.users-table__cell._underline {
+    text-decoration: underline;
+}
+
+.users-table__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    user-select: none;
+}
+
+@media screen and (max-width: 899px) {
+    .users-table__cell._hide-m {
+        display: none;
+    }
+}

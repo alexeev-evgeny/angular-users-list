@@ -1,0 +1,9 @@
+<div class="app wrapper">
+  <h1 class="app__title">Users</h1>
+
+  <div *ngIf="users.length">
+    <users-filter [users]="users" [filtersFormView]="filtersFormView" (filterChange)="onFilterChange($event)"></users-filter>
+    <users-table [users]="users" [filters]="filters" (sort)="onSort($event)"></users-table>
+  </div>
+
+</div>

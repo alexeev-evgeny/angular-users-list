@@ -1,0 +1,64 @@
+.users-filter {
+    display: block;
+    text-align: left;
+}
+
+.users-filter__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 24px 18px 0;
+}
+
+.users-filter__title {
+    display: block;
+    margin: 0 12px 6px 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.users-filter-checkbox {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 24px 0 0;
+    font-size: 15px;
+    line-height: 20px;
+    user-select: none;
+}
+
+.users-filter-checkbox__label {
+     cursor: pointer;
+}
+
+.users-filter-checkbox__input {
+    display: none;
+}
+
+.users-filter-checkbox__box {
+    display: inline-block;
+    vertical-align: top;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.users-filter-checkbox__input:checked + .users-filter-checkbox__box {
+    background-color: #0168bb;
+    border-color: #0168bb;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDEwIDEwIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRiIgZD0iTTEgM3YzbDMgMyA2LTZWMEw0IDYgMSAzeiIvPjwvc3ZnPg==);
+}
+
+.users-filter-checkbox__count {
+    color: #808080;
+}
+
+@media screen and (max-width: 899px) {
+    .users-filter__item {
+        display: block;
+    }
+}

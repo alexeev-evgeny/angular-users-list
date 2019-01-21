@@ -1,0 +1,15 @@
+<div class="users-filter">
+    <div class="users-filter__item" *ngFor="let filter of filtersFormView; let i = index">
+        <h4 class="users-filter__title">
+            {{ filter.title }}:
+        </h4>
+        <div class="users-filter-checkbox" *ngFor="let item of filter.data; let j = index">
+            <label class="users-filter-checkbox__label" [for]="'filter-' + i + j">
+                <input class="users-filter-checkbox__input" [id]="'filter-' + i + j" type="checkbox" [checked]="item.isSelected" (click)="updateFilter($event.target.checked, filter.title, item.value)">
+                <span class="users-filter-checkbox__box"></span>
+                <span>{{ item.value }}&nbsp;</span>
+                <span class="users-filter-checkbox__count">({{ item.count }})</span>
+            </label>
+        </div>
+    </div>
+</div>
